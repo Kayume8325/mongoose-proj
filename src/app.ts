@@ -1,19 +1,22 @@
 import cors from 'cors';
 
 import express, { Application, Request, Response } from 'express';
-import { StudentRoutes } from './app/modules/students/student.route';
+import { ProductRoutes } from './app/modules/products/product.route';
+import { OrderRoutes } from './app/modules/orders/order.routes';
+
 const app: Application = express();
 
 //Perser
-
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/v1/students', StudentRoutes);
+app.use('/api/products', ProductRoutes);
+
+//Perser from Orders
+app.use('/api/orders', OrderRoutes);
 
 const getAController = (req: Request, res: Response) => {
-  const a = 10;
-  res.send(a);
+  res.send();
 };
 
 app.get('/', getAController);

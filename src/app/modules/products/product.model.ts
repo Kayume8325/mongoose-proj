@@ -20,27 +20,3 @@ const productSchema = new Schema<TProduct>({
 });
 
 export const Product = model<TProduct>('Product', productSchema);
-//////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// const varientSchema = new Schema<TVarient>({
-//   type: {
-//     type: String,
-//   },
-//   value: {
-//     type: String,
-//   },
-// });
-
-// const productSchema = new Schema<TProduct>({
-//   name: { type: String },
-//   description: { type: String },
-//   price: { type: Number },
-//   category: { type: String },
-//   tags: [{ type: String }],
-
-//   variants: [varientSchema],
-//   inventory: {
-//     quantity: { type: Number },
-//     inStock: { type: Boolean },
-//   },
-// });
-// export const Product = model<TProduct>('Product', productSchema);
